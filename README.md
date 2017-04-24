@@ -1,9 +1,14 @@
-# api documentation for  [jsx-control-statements (v3.1.5)](https://github.com/AlexGilleran/jsx-control-statements#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-jsx-control-statements.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jsx-control-statements) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jsx-control-statements.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jsx-control-statements)
+# npmdoc-jsx-control-statements
+
+#### api documentation for  [jsx-control-statements (v3.1.5)](https://github.com/AlexGilleran/jsx-control-statements#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-jsx-control-statements.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jsx-control-statements) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jsx-control-statements.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jsx-control-statements)
+
 #### Neater control statements (if/for) for jsx
 
-[![NPM](https://nodei.co/npm/jsx-control-statements.png?downloads=true)](https://www.npmjs.com/package/jsx-control-statements)
+[![NPM](https://nodei.co/npm/jsx-control-statements.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/jsx-control-statements)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-jsx-control-statements/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-jsx-control-statements_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-jsx-control-statements/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-jsx-control-statements/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-jsx-control-statements/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-jsx-control-statements/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-jsx-control-statements/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-jsx-control-statements/build/screenCapture.npmPackageListing.svg)
 
@@ -17,8 +22,7 @@
 
 {
     "author": {
-        "name": "Alex Gilleran",
-        "email": "alex@alexgilleran.com"
+        "name": "Alex Gilleran"
     },
     "bugs": {
         "url": "https://github.com/AlexGilleran/jsx-control-statements/issues"
@@ -65,13 +69,11 @@
     "main": "src/index.js",
     "maintainers": [
         {
-            "name": "alexgilleran",
-            "email": "alex@alexgilleran.com"
+            "name": "alexgilleran"
         }
     ],
     "name": "jsx-control-statements",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/AlexGilleran/jsx-control-statements.git"
@@ -81,19 +83,10 @@
         "lint": "eslint src spec",
         "test": "mocha spec/*.js"
     },
-    "version": "3.1.5"
+    "version": "3.1.5",
+    "bin": {}
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module jsx-control-statements](#apidoc.module.jsx-control-statements)
-
-
-
-# <a name="apidoc.module.jsx-control-statements"></a>[module jsx-control-statements](#apidoc.module.jsx-control-statements)
 
 
 
