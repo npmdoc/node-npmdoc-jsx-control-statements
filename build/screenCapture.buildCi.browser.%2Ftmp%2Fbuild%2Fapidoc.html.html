@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/AlexGilleran/jsx-control-statements#readme"
-
-    >jsx-control-statements (v3.1.5)</a>
+    <a href="https://github.com/AlexGilleran/jsx-control-statements#readme">jsx-control-statements (v3.1.5)</a>
 </h1>
 <h4>Neater control statements (if/for) for jsx</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.jsx-control-statements">module jsx-control-statements</a><ol>
 
@@ -302,7 +295,7 @@
   };
 
   return {
-    inherits: require(&#x22;babel-plugin-syntax-jsx&#x22;),
+    inherits: require("babel-plugin-syntax-jsx"),
     visitor: visitor
   };
 }</pre></li>
@@ -333,14 +326,14 @@
   var keyFound = false;
 
   node.openingElement.attributes.forEach(function(attrib) {
-    if (babelTypes.isJSXAttribute(attrib) &#x26;&#x26; attrib.name.name === &#x22;key&#x22;) {
+    if (babelTypes.isJSXAttribute(attrib) &amp;&amp; attrib.name.name === "key") {
       keyFound = true;
       return false;
     }
   });
 
   if (!keyFound) {
-    var keyAttrib = babelTypes.jSXAttribute(babelTypes.jSXIdentifier(&#x22;key&#x22;), babelTypes.stringLiteral(&#x22;&#x22; + keyValue));
+    var keyAttrib = babelTypes.jSXAttribute(babelTypes.jSXIdentifier("key"), babelTypes.stringLiteral("" + keyValue));
     node.openingElement.attributes.push(keyAttrib);
   }
 }</pre></li>
@@ -485,17 +478,17 @@ if (!blocks[ELEMENTS.WHEN].length) {
   else if (blocks.length === 1) {
     var firstBlock = blocks[0];
 
-    if (keyPrefix &#x26;&#x26; firstBlock.openingElement) {
+    if (keyPrefix &amp;&amp; firstBlock.openingElement) {
       addKeyAttribute(babelTypes, firstBlock, keyPrefix);
     }
 
     return firstBlock;
   }
 
-  for (var i = 0; i &#x3c; blocks.length; i++) {
+  for (var i = 0; i &lt; blocks.length; i++) {
     var thisBlock = blocks[i];
     if (babelTypes.isJSXElement(thisBlock)) {
-      var key = keyPrefix ? keyPrefix + &#x22;-&#x22; + i : i;
+      var key = keyPrefix ? keyPrefix + "-" + i : i;
       addKeyAttribute(babelTypes, thisBlock, key);
     }
   }
@@ -532,17 +525,17 @@ resultSoFar[ELEMENTS.WHEN].push({
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">isExpressionContainer = function (attribute) {
-  return attribute &#x26;&#x26; attribute.value.type === TYPES.EXPRESSION_CONTAINER;
+  return attribute &amp;&amp; attribute.value.type === TYPES.EXPRESSION_CONTAINER;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 function checkForString(attributes, name, errorInfos) {
-if (attributes[name] &#x26;&#x26; !astUtil.isStringLiteral(attributes[name])) {
+if (attributes[name] &amp;&amp; !astUtil.isStringLiteral(attributes[name])) {
   errorUtil.throwNotStringType(name, errorInfos);
 }
 }
 
 function checkForExpression(attributes, name, errorInfos) {
-if (attributes[name] &#x26;&#x26; !astUtil.<span class="apidocCodeKeywordSpan">isExpressionContainer</span>(attributes[name])) {
+if (attributes[name] &amp;&amp; !astUtil.<span class="apidocCodeKeywordSpan">isExpressionContainer</span>(attributes[name])) {
   errorUtil.throwNotExpressionType(name, errorInfos);
 }
 }
@@ -562,7 +555,7 @@ var types = babel.types;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">isStringLiteral = function (attribute) {
-  return attribute &#x26;&#x26; attribute.value.type === TYPES.STRING_LITERAL;
+  return attribute &amp;&amp; attribute.value.type === TYPES.STRING_LITERAL;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 }
@@ -572,13 +565,13 @@ else {
 }
 
 function checkForString(attributes, name, errorInfos) {
-if (attributes[name] &#x26;&#x26; !astUtil.<span class="apidocCodeKeywordSpan">isStringLiteral</span>(attributes[name])) {
+if (attributes[name] &amp;&amp; !astUtil.<span class="apidocCodeKeywordSpan">isStringLiteral</span>(attributes[name])) {
   errorUtil.throwNotStringType(name, errorInfos);
 }
 }
 
 function checkForExpression(attributes, name, errorInfos) {
-if (attributes[name] &#x26;&#x26; !astUtil.isExpressionContainer(attributes[name])) {
+if (attributes[name] &amp;&amp; !astUtil.isExpressionContainer(attributes[name])) {
   errorUtil.throwNotExpressionType(name, errorInfos);
 ...</pre></li>
     </ul>
@@ -593,7 +586,7 @@ if (attributes[name] &#x26;&#x26; !astUtil.isExpressionContainer(attributes[name
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">isTag = function (node, tagName) {
-  return node.type === TYPES.ELEMENT &#x26;&#x26; getTagName(node) === tagName;
+  return node.type === TYPES.ELEMENT &amp;&amp; getTagName(node) === tagName;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
@@ -682,7 +675,7 @@ else {
   return formatString(errorMsg, args);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  return typeof args[number] !== &#x22;undefined&#x22; ? args[number] : match;
+  return typeof args[number] !== "undefined" ? args[number] : match;
 });
 }
 
@@ -690,13 +683,13 @@ function throwError(errorMsg, infos) {
 throw new Error(
   [
     exports.<span class="apidocCodeKeywordSpan">renderErrorMessage</span>(errorMsg, infos),
-    &#x22; at &#x22;,
+    " at ",
     infos.file.opts.filename,
-    &#x22;: &#x22;,
+    ": ",
     infos.node.loc.start.line,
-    &#x22;,&#x22;,
+    ",",
     infos.node.loc.start.column
-  ].join(&#x22;&#x22;)
+  ].join("")
 ...</pre></li>
     </ul>
 
@@ -870,13 +863,13 @@ checkForString(attributes, ATTRIBUTES.INDEX, errorInfos);
   throwError(ERRORS.NOT_EXPRESSION_TYPE, infos);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-if (attributes[name] &#x26;&#x26; !astUtil.isStringLiteral(attributes[name])) {
+if (attributes[name] &amp;&amp; !astUtil.isStringLiteral(attributes[name])) {
   errorUtil.throwNotStringType(name, errorInfos);
 }
 }
 
 function checkForExpression(attributes, name, errorInfos) {
-if (attributes[name] &#x26;&#x26; !astUtil.isExpressionContainer(attributes[name])) {
+if (attributes[name] &amp;&amp; !astUtil.isExpressionContainer(attributes[name])) {
   errorUtil.<span class="apidocCodeKeywordSpan">throwNotExpressionType</span>(name, errorInfos);
 }
 }
@@ -908,13 +901,13 @@ else {
 }
 
 function checkForString(attributes, name, errorInfos) {
-if (attributes[name] &#x26;&#x26; !astUtil.isStringLiteral(attributes[name])) {
+if (attributes[name] &amp;&amp; !astUtil.isStringLiteral(attributes[name])) {
   errorUtil.<span class="apidocCodeKeywordSpan">throwNotStringType</span>(name, errorInfos);
 }
 }
 
 function checkForExpression(attributes, name, errorInfos) {
-if (attributes[name] &#x26;&#x26; !astUtil.isExpressionContainer(attributes[name])) {
+if (attributes[name] &amp;&amp; !astUtil.isExpressionContainer(attributes[name])) {
   errorUtil.throwNotExpressionType(name, errorInfos);
 }
 ...</pre></li>
@@ -931,3 +924,4 @@ if (attributes[name] &#x26;&#x26; !astUtil.isExpressionContainer(attributes[name
     ]
 </div>
 </div>
+</body></html>
